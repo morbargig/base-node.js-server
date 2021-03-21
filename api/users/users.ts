@@ -66,7 +66,7 @@ router.post("/login", async (req, res) => {
         if (!validPass) return res.status(400).json({ message: "wrong password" })
     }
     else {
-        // user don't ageists
+        // user doesn't exist
         return res.status(400).json({ message: "No such user" })
     }
     // return generated token
